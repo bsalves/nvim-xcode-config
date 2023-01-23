@@ -106,7 +106,7 @@ let g:ale_fix_on_save = 1
 
 
 " Coc config
-inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<return>"
+" inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<return>"
 let g:coc_global_extensions = []
 
 nmap <silent> gd <Plug>(coc-definition)
@@ -124,11 +124,6 @@ if (has("nvim"))
     nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 endif
 
-
-" Xcode settings
-
-let g:xcode_default_simulator = 'iPhone 12'
-let g:xcode_default_sdk = 'iphonesimulator'
 
 
 " Autocomplete remapping

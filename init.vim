@@ -152,3 +152,8 @@ augroup END
 " autocmd FileType swift setlocal omnifunc=lsp#complete
 autocmd FileType swift nnoremap <C-]> :LspDefinition<CR>
 
+
+" terminal
+" vim-powered terminal in split window
+map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:10split term://zsh<CR>cd $VIM_DIR<CR>
+

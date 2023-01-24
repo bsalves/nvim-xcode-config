@@ -20,7 +20,10 @@ Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'keith/swift.vim'
 
-" Plug 'hkrish/vimxcode'
+Plug 'hkrish/vimxcode'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
@@ -63,10 +66,15 @@ filetype indent on   " Load the indent file for the file type, if any
 " remapping
 " Shortcuts for split navigation
 nmap <C-a> :NERDTreeToggle<CR>
+nmap <C-.> :ALEToggle<CR>
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
 
 
 " Themes """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,14 +117,13 @@ let g:ale_fix_on_save = 1
 " inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<return>"
 let g:coc_global_extensions = []
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
 
 
 if (has("nvim"))
-
     " Telescope """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     nnoremap <leader>ff <cmd>Telescope find_files<cr>
     nnoremap <leader>fg <cmd>Telescope live_grep<cr>

@@ -5,5 +5,9 @@
           "command": "sourcekit-lsp",
         }
     },
-    "snippets.ultisnips.pythonPrompt": false
+    "snippets.ultisnips.pythonPrompt": false,
+
+    "sourcekit.env": {
+        "SOURCEKIT_LOGGING": "3" // verbose logging
+    }
 }

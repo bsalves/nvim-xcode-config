@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<C-.>	init.vim	/^nmap <C-.> :ALEToggle<CR>$/;"	m
+<C-h>	init.vim	/^map <C-h> <C-w>h$/;"	m
+<C-j>	init.vim	/^map <C-j> <C-w>j$/;"	m
+<C-k>	init.vim	/^map <C-k> <C-w>k$/;"	m
+<C-l>	init.vim	/^map <C-l> <C-w>l$/;"	m
+<F6>	init.vim	/^map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:10split term:\/\/zsh<CR>cd $VIM_DIR<CR>$/;"	m
+<SPACE>	init.vim	/^nnoremap <SPACE> <Nop>$/;"	m
+<leader>F	init.vim	/^  nnoremap <leader>F :!swiftformat %<cr>$/;"	m
+<leader>e	init.vim	/^nmap <leader>e :NERDTreeToggle<CR>$/;"	m
+<leader>fb	init.vim	/^    nnoremap <leader>fb <cmd>Telescope buffers<cr>$/;"	m
+<leader>ff	init.vim	/^    nnoremap <leader>ff <cmd>Telescope find_files<cr>$/;"	m
+<leader>fg	init.vim	/^    nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
+<leader>fh	init.vim	/^    nnoremap <leader>fh <cmd>Telescope help_tags<cr>$/;"	m
+<leader>gb	init.vim	/^nnoremap <silent> <leader>gb :BlamerToggle<CR>$/;"	m
+<leader>gg	init.vim	/^nnoremap <silent> <leader>gg :LazyGit<CR>$/;"	m
+<return>	init.vim	/^inoremap <silent><expr> <return> coc#pum#visible() ? coc#pum#confirm() : "\\<C-g>u\\<return>"$/;"	m
+filetype	init.vim	/^augroup filetype$/;"	a
+g:NERDTreeGitStatusConcealBrackets	init.vim	/^let g:NERDTreeGitStatusConcealBrackets = 1$/;"	v
+g:NERDTreeGitStatusIndicatorMapCustom	init.vim	/^let g:NERDTreeGitStatusIndicatorMapCustom = {$/;"	v
+g:NERDTreeGitStatusUntrackedFilesMode	init.vim	/^let g:NERDTreeGitStatusUntrackedFilesMode = 'all'$/;"	v
+g:airline#extensions#tabline#enabled	init.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline_powerline_fonts	init.vim	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_theme	init.vim	/^let g:airline_theme = 'sonokai'$/;"	v
+g:ale_linters	init.vim	/^let g:ale_linters = {$/;"	v
+g:blamer_delay	init.vim	/^let g:blamer_delay = 100$/;"	v
+g:blamer_enabled	init.vim	/^let g:blamer_enabled = 1$/;"	v
+g:clamp_autostart	init.vim	/^    let g:clamp_autostart = 1$/;"	v
+g:clamp_libclang_file	init.vim	/^    let g:clamp_libclang_file = '\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/libclang.dylib'$/;"	v
+g:clighter8_autostart	init.vim	/^    let g:clighter8_autostart = 1$/;"	v
+g:clighter8_libclang_file	init.vim	/^    let g:clighter8_libclang_file = '\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/libclang.dylib'$/;"	v
+g:coc_global_extensions	init.vim	/^let g:coc_global_extensions = []$/;"	v
+g:lazygit_config_file_path	init.vim	/^let g:lazygit_config_file_path = '' " custom config file path$/;"	v
+g:lazygit_floating_window_corner_chars	init.vim	/^let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters$/;"	v
+g:lazygit_floating_window_scaling_factor	init.vim	/^let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window$/;"	v
+g:lazygit_floating_window_use_plenary	init.vim	/^let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available$/;"	v
+g:lazygit_floating_window_winblend	init.vim	/^let g:lazygit_floating_window_winblend = 0 " transparency of floating window$/;"	v
+g:lazygit_use_custom_config_file_path	init.vim	/^let g:lazygit_use_custom_config_file_path = 0 " config file path is evaluated if this value is 1$/;"	v
+g:lazygit_use_neovim_remote	init.vim	/^let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed$/;"	v
+g:sonokai_current_word	init.vim	/^let g:sonokai_current_word = 'bold'$/;"	v
+g:sonokai_diagnostic_line_highlight	init.vim	/^let g:sonokai_diagnostic_line_highlight = 1$/;"	v
+g:sonokai_disable_italic_comment	init.vim	/^let g:sonokai_disable_italic_comment = 0$/;"	v
+g:sonokai_enable_italic	init.vim	/^let g:sonokai_enable_italic = 1$/;"	v
+g:sonokai_style	init.vim	/^let g:sonokai_style = 'maia'$/;"	v
+g:syntastic_swift_checkers	init.vim	/^let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']$/;"	v
+g:tagbar_type_swift	init.vim	/^let g:tagbar_type_swift = {$/;"	v
+gd	init.vim	/^map gd :bd<cr>$/;"	m
+gn	init.vim	/^map gn :bn<cr>$/;"	m
+gp	init.vim	/^map gp :bp<cr>$/;"	m
+mapleader	init.vim	/^let mapleader=" "$/;"	v

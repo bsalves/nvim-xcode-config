@@ -9,7 +9,6 @@
 <C-j>	init.vim	/^map <C-j> <C-w>j$/;"	m
 <C-k>	init.vim	/^map <C-k> <C-w>k$/;"	m
 <C-l>	init.vim	/^map <C-l> <C-w>l$/;"	m
-<F6>	init.vim	/^map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:10split term:\/\/zsh<CR>cd $VIM_DIR<CR>$/;"	m
 <SPACE>	init.vim	/^nnoremap <SPACE> <Nop>$/;"	m
 <leader>F	init.vim	/^  nnoremap <leader>F :!swiftformat %<cr>$/;"	m
 <leader>e	init.vim	/^nmap <leader>e :NERDTreeToggle<CR>$/;"	m
@@ -21,32 +20,47 @@
 <leader>gg	init.vim	/^nnoremap <silent> <leader>gg :LazyGit<CR>$/;"	m
 <return>	init.vim	/^inoremap <silent><expr> <return> coc#pum#visible() ? coc#pum#confirm() : "\\<C-g>u\\<return>"$/;"	m
 filetype	init.vim	/^augroup filetype$/;"	a
+g:NERDAltDelims_java	init.vim	/^let g:NERDAltDelims_java = 1$/;"	v
+g:NERDCommentEmptyLines	init.vim	/^let g:NERDCommentEmptyLines = 1$/;"	v
+g:NERDCompactSexyComs	init.vim	/^let g:NERDCompactSexyComs = 1$/;"	v
+g:NERDCreateDefaultMappings	init.vim	/^let g:NERDCreateDefaultMappings = 1$/;"	v
+g:NERDCustomDelimiters	init.vim	/^let g:NERDCustomDelimiters = { 'c': { 'left': '\/**','right': '*\/' } }$/;"	v
+g:NERDDefaultAlign	init.vim	/^let g:NERDDefaultAlign = 'left'$/;"	v
+g:NERDSpaceDelims	init.vim	/^let g:NERDSpaceDelims = 1$/;"	v
+g:NERDToggleCheckAllLines	init.vim	/^let g:NERDToggleCheckAllLines = 1$/;"	v
 g:NERDTreeGitStatusConcealBrackets	init.vim	/^let g:NERDTreeGitStatusConcealBrackets = 1$/;"	v
 g:NERDTreeGitStatusIndicatorMapCustom	init.vim	/^let g:NERDTreeGitStatusIndicatorMapCustom = {$/;"	v
 g:NERDTreeGitStatusUntrackedFilesMode	init.vim	/^let g:NERDTreeGitStatusUntrackedFilesMode = 'all'$/;"	v
+g:NERDTreeWinSize	init.vim	/^let g:NERDTreeWinSize=60$/;"	v
+g:NERDTrimTrailingWhitespace	init.vim	/^let g:NERDTrimTrailingWhitespace = 1$/;"	v
 g:airline#extensions#tabline#enabled	init.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
 g:airline_powerline_fonts	init.vim	/^let g:airline_powerline_fonts = 1$/;"	v
-g:airline_theme	init.vim	/^let g:airline_theme = 'sonokai'$/;"	v
+g:airline_theme	init.vim	/^let g:airline_theme = 'github_dark_high_contrast'$/;"	v
 g:ale_linters	init.vim	/^let g:ale_linters = {$/;"	v
-g:blamer_delay	init.vim	/^let g:blamer_delay = 100$/;"	v
-g:blamer_enabled	init.vim	/^let g:blamer_enabled = 1$/;"	v
+g:blamer_delay	init.vim	/^let g:blamer_delay = 1$/;"	v
+g:blamer_enabled	init.vim	/^let g:blamer_enabled = 0$/;"	v
+g:blamer_show_in_visual_modes	init.vim	/^let g:blamer_show_in_visual_modes = 1$/;"	v
 g:clamp_autostart	init.vim	/^    let g:clamp_autostart = 1$/;"	v
 g:clamp_libclang_file	init.vim	/^    let g:clamp_libclang_file = '\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/libclang.dylib'$/;"	v
 g:clighter8_autostart	init.vim	/^    let g:clighter8_autostart = 1$/;"	v
 g:clighter8_libclang_file	init.vim	/^    let g:clighter8_libclang_file = '\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/libclang.dylib'$/;"	v
 g:coc_global_extensions	init.vim	/^let g:coc_global_extensions = []$/;"	v
+g:edge_better_performance	init.vim	/^let g:edge_better_performance = 1$/;"	v
+g:edge_style	init.vim	/^let g:edge_style = 'neon'$/;"	v
+g:everforest_background	init.vim	/^let g:everforest_background = 'soft'$/;"	v
+g:everforest_ui_contrast	init.vim	/^let g:everforest_ui_contrast = 'high'$/;"	v
 g:lazygit_config_file_path	init.vim	/^let g:lazygit_config_file_path = '' " custom config file path$/;"	v
 g:lazygit_floating_window_corner_chars	init.vim	/^let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters$/;"	v
-g:lazygit_floating_window_scaling_factor	init.vim	/^let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window$/;"	v
+g:lazygit_floating_window_scaling_factor	init.vim	/^let g:lazygit_floating_window_scaling_factor = 1 " scaling factor for floating window$/;"	v
 g:lazygit_floating_window_use_plenary	init.vim	/^let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available$/;"	v
-g:lazygit_floating_window_winblend	init.vim	/^let g:lazygit_floating_window_winblend = 0 " transparency of floating window$/;"	v
+g:lazygit_floating_window_winblend	init.vim	/^let g:lazygit_floating_window_winblend = 1 " transparency of floating window$/;"	v
 g:lazygit_use_custom_config_file_path	init.vim	/^let g:lazygit_use_custom_config_file_path = 0 " config file path is evaluated if this value is 1$/;"	v
 g:lazygit_use_neovim_remote	init.vim	/^let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed$/;"	v
 g:sonokai_current_word	init.vim	/^let g:sonokai_current_word = 'bold'$/;"	v
 g:sonokai_diagnostic_line_highlight	init.vim	/^let g:sonokai_diagnostic_line_highlight = 1$/;"	v
 g:sonokai_disable_italic_comment	init.vim	/^let g:sonokai_disable_italic_comment = 0$/;"	v
 g:sonokai_enable_italic	init.vim	/^let g:sonokai_enable_italic = 1$/;"	v
-g:sonokai_style	init.vim	/^let g:sonokai_style = 'maia'$/;"	v
+g:sonokai_style	init.vim	/^let g:sonokai_style = 'default'$/;"	v
 g:syntastic_swift_checkers	init.vim	/^let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']$/;"	v
 g:tagbar_type_swift	init.vim	/^let g:tagbar_type_swift = {$/;"	v
 gd	init.vim	/^map gd :bd<cr>$/;"	m

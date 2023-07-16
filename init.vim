@@ -5,7 +5,7 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'vim-syntastic/syntastic'
 
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 
 "GIT
 Plug 'kdheepak/lazygit.nvim'
@@ -13,42 +13,51 @@ Plug 'APZelos/blamer.nvim'
 
 " Themes
 Plug 'sainnhe/sonokai'
+Plug 'sainnhe/everforest'
+Plug 'sainnhe/edge'
+Plug 'projekt0n/github-nvim-theme'
+Plug 'shaunsingh/nord.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'preservim/nerdcommenter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'keith/swift.vim'
 
 Plug 'hkrish/vimxcode'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'skywind3000/gutentags_plus'
+" Plug 'ludovicchabant/vim-gutentags'
+" Plug 'skywind3000/gutentags_plus'
 
-Plug 'Shougo/deoplete.nvim'
-Plug 'mitsuse/autocomplete-swift'
-Plug 'landaire/deoplete-swift'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+" Plug 'mitsuse/autocomplete-swift'
+" Plug 'landaire/deoplete-swift'
 Plug 'kballard/vim-swift'
-Plug 'aciidb0mb3r/SwiftDoc.vim'
+" Plug 'aciidb0mb3r/SwiftDoc.vim'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-dispatch'
 
 
-Plug 'neovim/nvim-lspconfig'
-Plug 'xbase-lab/xbase'
-
-
-
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'xbase-lab/xbase', { 'do': 'make install' }
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
@@ -57,9 +66,42 @@ endif
 call plug#end()
 
 
+
 " map leader
 let mapleader=" "
 nnoremap <SPACE> <Nop>
+
+" Deoplate
+" let g:deoplete#enable_at_startup = 1
+
+
+" NERDTree commenter
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
 
 
 " ctags for swift -------------------------- {{{
@@ -85,7 +127,7 @@ let g:tagbar_type_swift = {
 " }}}
 
 " autocomplete for swift ------------------- {{{
-autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
+" autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
 " }}}
 
 " CLighter Xcode --------------------------- {{{
@@ -149,18 +191,17 @@ map gd :bd<cr>
 
 
 " GIT
-let g:lazygit_floating_window_winblend = 0 " transparency of floating window
-let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
-let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
-let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
+let g:lazygit_floating_window_winblend = 1 " transparency of floating window
+let g:lazygit_floating_window_scaling_factor = 1 " scaling factor for floating window
 let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed
 
 let g:lazygit_use_custom_config_file_path = 0 " config file path is evaluated if this value is 1
 let g:lazygit_config_file_path = '' " custom config file path
 nnoremap <silent> <leader>gg :LazyGit<CR>
 
-let g:blamer_enabled = 1
-let g:blamer_delay = 100
+let g:blamer_enabled = 0
+let g:blamer_delay = 1
+let g:blamer_show_in_visual_modes = 1
 nnoremap <silent> <leader>gb :BlamerToggle<CR>
 
 
@@ -172,15 +213,31 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-" Sonokay
-let g:sonokai_style = 'maia'
+" Sonokai
+let g:sonokai_style = 'default'
 let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 0
 let g:sonokai_diagnostic_line_highlight = 1
 let g:sonokai_current_word = 'bold'
 
-colorscheme sonokai
-let g:airline_theme = 'sonokai'
+" Everforest
+let g:everforest_ui_contrast = 'high'
+let g:everforest_background = 'soft'
+
+" Edge
+let g:edge_style = 'neon'
+let g:edge_better_performance = 1
+
+" GitHub Themes
+
+" Nord theme
+
+
+" colorscheme everforest
+colorscheme github_dark_high_contrast
+" colorscheme catppuccin
+" set background=light
+let g:airline_theme = 'github_dark_high_contrast'
 
 
 
@@ -222,6 +279,7 @@ endif
 " NERDTree
 let g:NERDTreeGitStatusConcealBrackets = 1
 let g:NERDTreeGitStatusUntrackedFilesMode = 'all'
+let g:NERDTreeWinSize=60
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'✹',
@@ -263,8 +321,9 @@ autocmd FileType swift nnoremap <C-]> :LspDefinition<CR>
 
 " terminal
 " vim-powered terminal in split window
-map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:10split term://zsh<CR>cd $VIM_DIR<CR>
+" map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:10split term://zsh<CR>cd $VIM_DIR<CR>
 
 
 " Clipboard
 set clipboard=unnamed
+

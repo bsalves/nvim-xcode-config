@@ -10,6 +10,7 @@ Plug 'vim-syntastic/syntastic'
 "GIT
 Plug 'kdheepak/lazygit.nvim'
 Plug 'APZelos/blamer.nvim'
+Plug 'airblade/vim-gitgutter'
 
 " Themes
 Plug 'sainnhe/sonokai'
@@ -234,10 +235,11 @@ let g:edge_better_performance = 1
 
 
 " colorscheme everforest
-colorscheme github_dark_high_contrast
+colorscheme github_dark
 " colorscheme catppuccin
 " set background=light
-let g:airline_theme = 'github_dark_high_contrast'
+let g:airline_theme = 'github_dark'
+" let g:airline_theme = 'catppuccin'
 
 
 

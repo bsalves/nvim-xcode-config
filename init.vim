@@ -12,6 +12,10 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'APZelos/blamer.nvim'
 Plug 'airblade/vim-gitgutter'
 
+" AI Autocomplete/Helpers
+Plug 'github/copilot.vim'
+Plug 'madox2/vim-ai'
+
 " Themes
 Plug 'sainnhe/sonokai'
 Plug 'sainnhe/everforest'
@@ -135,10 +139,10 @@ let g:tagbar_type_swift = {
 " Config for CLighter
 if has('nvim')
     let g:clamp_autostart = 1
-    let g:clamp_libclang_file = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+    let g:clamp_libclang_file = '/Applications/Xcode15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
 else
     let g:clighter8_autostart = 1
-    let g:clighter8_libclang_file = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+    let g:clighter8_libclang_file = '/Applications/Xcode15.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
   endif
 " }}}
 
@@ -235,10 +239,12 @@ let g:edge_better_performance = 1
 
 
 " colorscheme everforest
-colorscheme github_dark
 " colorscheme catppuccin
 " set background=light
-let g:airline_theme = 'github_dark'
+" colorscheme github_light_high_contrast
+" colorscheme github_dark_high_contrast
+colorscheme sonokai
+" let g:airline_theme = 'github_dark_high_contrast'
 " let g:airline_theme = 'catppuccin'
 
 
@@ -254,9 +260,9 @@ let g:ale_linters = {
 \   'swift': ['swiftlint']
 \}
 
-" let g:ale_fixers = {
-" \   '*': ['trim_whitespace'],
-" \}
+let g:ale_fixers = {
+\   '*': ['trim_whitespace'],
+\}
 
 " let g:ale_fix_on_save = 1
 
@@ -328,4 +334,18 @@ autocmd FileType swift nnoremap <C-]> :LspDefinition<CR>
 
 " Clipboard
 set clipboard=unnamed
+
+
+" ChatGPT
+let chat_engine_config = {
+\  "engine": "chat",
+\  "options": {
+\    "model": "gpt-3.5-turbo",
+\    "endpoint_url": "https://api.openai.com/v1/chat/completions",
+\    "max_tokens": 1000,
+\    "temperature": 0.1,
+\    "request_timeout": 20,
+\    "selection_boundary": ""
+\  },
+\}
 

@@ -238,12 +238,13 @@ let g:edge_better_performance = 1
 " Nord theme
 
 
+" set background=light
 " colorscheme everforest
 " colorscheme catppuccin
-" set background=light
 " colorscheme github_light_high_contrast
-" colorscheme github_dark_high_contrast
-colorscheme sonokai
+" colorscheme github_dark
+" colorscheme sonokai
+" let g:airline_ = 'github_dark'
 " let g:airline_theme = 'github_dark_high_contrast'
 " let g:airline_theme = 'catppuccin'
 
@@ -349,3 +350,13 @@ let chat_engine_config = {
 \  },
 \}
 
+" Spliting...
+
+nnoremap <silent> + :res +1 %<cr>
+nnoremap <silent> _ :res -1 %<cr>
+
+nnoremap <silent> = :vertical res +5 %<cr>
+nnoremap <silent> - :vertical res -5 %<cr>
+
+nnoremap <silent> s :split<cr>
+nnoremap <silent> S :vsplit<cr>

@@ -14,7 +14,7 @@ Plug 'airblade/vim-gitgutter'
 
 " AI Autocomplete/Helpers
 Plug 'github/copilot.vim'
-Plug 'madox2/vim-ai'
+" Plug 'madox2/vim-ai'
 
 " Themes
 Plug 'sainnhe/sonokai'

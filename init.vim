@@ -193,10 +193,14 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-map gn :bn<cr>
-map gp :bp<cr>
-map gd :bd<cr>
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
+" nnoremap <C-c> :bd<CR>
 
+map <silent> <leader>n :noh<CR>
+map <C-s> :w<CR>
+map <C-q> :q<CR>
+map <C-Q> :q!<CR>
 
 " GIT
 let g:lazygit_floating_window_winblend = 1 " transparency of floating window
@@ -244,10 +248,11 @@ let g:edge_better_performance = 1
 " set background=light
 " colorscheme everforest
 " colorscheme catppuccin
-" colorscheme github_light_high_contrast
+" colorscheme github_dark_high_contrast
 " colorscheme github_dark
-" colorscheme sonokai
-" let g:airline_ = 'github_dark'
+colorscheme sonokai
+let g:airline_theme = 'sonokai'
+" let g:airline_ = 'github_dark_high_contrast'
 " let g:airline_theme = 'github_dark_high_contrast'
 " let g:airline_theme = 'catppuccin'
 

@@ -195,7 +195,7 @@ map <C-l> <C-w>l
 
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
-" nnoremap <C-c> :bd<CR>
+nnoremap <C-x> :bd<CR>
 
 map <silent> <leader>n :noh<CR>
 map <C-s> :w<CR>

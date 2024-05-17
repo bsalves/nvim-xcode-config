@@ -202,6 +202,10 @@ map <C-s> :w<CR>
 map <C-q> :q<CR>
 map <C-Q> :q!<CR>
 
+
+" Map to run ruby command line current file
+map <leader>r : w <bar> !ruby % <CR>
+
 " GIT
 let g:lazygit_floating_window_winblend = 1 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 1 " scaling factor for floating window
@@ -212,7 +216,7 @@ let g:lazygit_config_file_path = '' " custom config file path
 nnoremap <silent> <leader>gg :LazyGit<CR>
 
 let g:blamer_enabled = 0
-let g:blamer_delay = 1
+let g:blamer_delay = 0
 let g:blamer_show_in_visual_modes = 1
 nnoremap <silent> <leader>gb :BlamerToggle<CR>
 
@@ -244,14 +248,18 @@ let g:edge_better_performance = 1
 
 " Nord theme
 
+set cursorline
 
-" set background=light
+set background=dark
 " colorscheme everforest
 " colorscheme catppuccin
+" colorscheme nord
+" colorscheme edge
 " colorscheme github_dark_high_contrast
 " colorscheme github_dark
 colorscheme sonokai
 let g:airline_theme = 'sonokai'
+" let g:airline_ = 'github_dark'
 " let g:airline_ = 'github_dark_high_contrast'
 " let g:airline_theme = 'github_dark_high_contrast'
 " let g:airline_theme = 'catppuccin'

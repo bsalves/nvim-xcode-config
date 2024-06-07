@@ -79,6 +79,9 @@ call plug#end()
 let mapleader=" "
 nnoremap <SPACE> <Nop>
 
+" remap metakey
+let g:meta_key = 1
+
 " Deoplate
 " let g:deoplete#enable_at_startup = 1
 
@@ -193,14 +196,13 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-nnoremap <C-n> :bn<CR>
-nnoremap <C-p> :bp<CR>
-nnoremap <C-x> :bd<CR>
+nnoremap <silent> <C-0> :bn<CR>
+nnoremap <silent> <C-9> :bp<CR>
+nnoremap <silent> <C-x> :bd<CR>
 
 map <silent> <leader>n :noh<CR>
 map <C-s> :w<CR>
 map <C-q> :q<CR>
-map <C-Q> :q!<CR>
 
 
 " Map to run ruby command line current file
@@ -281,6 +283,7 @@ let g:ale_fixers = {
 \   '*': ['trim_whitespace'],
 \}
 
+" It fix the file on save
 " let g:ale_fix_on_save = 1
 
 
@@ -291,7 +294,7 @@ let g:coc_global_extensions = []
 " nmap <silent> gy <Plug>(coc-type-definition)
 " nmap <silent> gi <Plug>(coc-implementation)
 " nmap <silent> gr <Plug>(coc-references)
-
+let g:coc_global_extensions = ['coc-solargraph']
 
 if (has("nvim"))
     " Telescope """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -397,3 +400,15 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
+
+" Quickfix remapping
+
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+
+nnoremap <silent> <Leader>q :call ToggleQuickFix()<cr>
